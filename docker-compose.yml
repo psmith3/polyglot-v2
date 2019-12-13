@@ -1,0 +1,28 @@
+version: '1'
+services:
+    mongo:
+        image: "mongo:latest"
+        container_name: "mongodb"
+        network_mode: host
+        volumes:
+         - ./mongodb:/data/db
+        ports:
+         - "27017:27017"
+        restart: always
+    polyglot:
+        stdin_open: true
+        tty: true
+        build: .
+        container_name: polyglotv2
+        network_mode: host
+        ports:
+         - "3000:3000"
+        volumes:
+         - ./dot-polyglot:/root/.polyglot
+        depends_on:
+         - mongo
+        environment:
+         - PYTHON=/usr/bin/python
+         - PYTHON3=/usr/bin/python3
+         - NODE_ENV=development
+        restart: always
