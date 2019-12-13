@@ -6,19 +6,21 @@ This repository provides the necessary requirments to run the latest UDI Polyglo
 
 The same requirements exist from https://github.com/UniversalDevicesInc/polyglot-v2
 
+To clone this repository, you will need git installed. Log onto your Synology NAS and install the Git Server Package from the Package Store.
+
 This installation will create docker containers for polyglot-v2 and mongo. Local volumes will be created for the polyglot-v2 configuration and mongo database and will be persistant across reboots. Both containers use the docker host network so that polyglot will find your ISY and nodeservers will auto discover local devices in the network.
 
 ### Installation instructions
 
-ssh into your NAS.
+1) ssh into your NAS.
 
-$ cd volume1/docker/
+2) $ cd volume1/docker/
 
-$ sudo git clone https://github.com/psmith3/polyglot-v2.git
+3) $ sudo git clone https://github.com/psmith3/polyglot-v2.git
 
-Enter your admin Password: 
+4) Enter your admin Password: 
 
-	Cloning into 'polyglot-v2'...
+		Cloning into 'polyglot-v2'...
 		remote: Enumerating objects: 20, done.
 		remote: Counting objects: 100% (20/20), done.
 		remote: Compressing objects: 100% (19/19), done.
@@ -26,14 +28,14 @@ Enter your admin Password:
 		Receiving objects: 100% (3832/3832), 264.35 MiB | 27.60 MiB/s, done.
 		Resolving deltas: 100% (2274/2274), done.
 
-$ cd polyglot-v2/
+5) $ cd polyglot-v2/
 
-$ ./install.sh 
+6) $ ./install.sh 
 
 		Installing polyglot-v2 and mongo...
 		Running docker-compose up...
 
-Enter admin Password:
+7) Enter admin Password if prompted:
 
 		Creating mongodb ... done
 		Creating polyglotv2 ... done
