@@ -66,4 +66,6 @@ Your browser may not allow you to view the webpage because the ssl certs are not
 
 Your ISY will be discovered, but you will have to go to the settings page and enter your ISY username and password.
 
+Thanks to einstein.42 for his original work. 
+
 Enjoy!
