@@ -54,7 +54,7 @@ This installation will create docker containers for polyglot-v2 and mongo. Local
 		polyglotv2 is up-to-date
 		Polyglot v2 should now be running in Docker! Access via webbrowser at https://{docker ip address}:3000
 		
-Your browser may not allow you to view the webpage because the ssl certs are not signed. You can allow this with Safari on Mac or you can open a private browser window and access. You can overide the use https setting in the ./dot-polyglot/.env file to overcome this, but you will have to manually edit each node server in the ISY and uncheck SSL. 
+Your browser may not allow you to view the webpage because the ssl certs are not signed. You can allow this with Safari on Mac or you can open a private browser window and access. You can overide the use https setting in the ./dot-polyglot/.env file to overcome this, but you will have to manually edit each node server in the ISY and uncheck SSL. If required, edit the .env.example file in the ./dot-polyglot directory and save the file as .env.
 
 Your ISY will be discovered, but you will have to go to the settings page and enter your ISY username and password.
 
