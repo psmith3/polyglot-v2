@@ -1,10 +1,10 @@
-# UDI Polyglot v2
-
-[![Build Status](https://travis-ci.org/UniversalDevicesInc/polyglot-v2.svg?branch=master)](https://travis-ci.org/UniversalDevicesInc/polyglot-v2)
+# UDI Polyglot v2 for Docker on Synology
 
 Polyglot is a Middleware between the [Universal Devices ISY Home Automation device](http://www.universal-devices.com/) and any number of external devices and services. 
 
-Requirements: Network Module or ISY Portal (which includes the Network Module)
+This repository provides the necessary requirments to run the latest UDI Polyglot-v2 build in Docker running on a Synology NAS. I specifically run a DS1815+.
+
+The same requirements exist from https://github.com/UniversalDevicesInc/polyglot-v2
 
 Requirements: Network Module or ISY Portal (which includes the Network Module)
 
