@@ -6,7 +6,7 @@ This repository provides the necessary requirments to run the latest UDI Polyglo
 
 The script will download docker images for the following: 
 
-debian:stretch https://registry.hub.docker.com/_/debian/
+python:3.7-slim-buster https://registry.hub.docker.com/_/python/
 
 mongo:latest https://registry.hub.docker.com/_/mongo/
 
