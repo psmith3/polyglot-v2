@@ -2,15 +2,7 @@
 
 Polyglot is a Middleware between the [Universal Devices ISY Home Automation device](http://www.universal-devices.com/) and any number of external devices and services. 
 
-This repository provides the necessary requirments to run the latest UDI Polyglot-v2 build in Docker running on a Synology NAS. I specifically run a DS1815+.
-
-The script will download docker images for the following: 
-
-python:3.7-slim-buster https://registry.hub.docker.com/_/python/
-
-mongo:latest https://registry.hub.docker.com/_/mongo/
-
-It will also create a docker image for polyglot-v2 from the included dockerfile and gets the latest linux binary image from from https://s3.amazonaws.com/polyglotv2/binaries/polyglot-v2-linux-x64.tar.gz. When creating the polyglot-v2 image, the dockerfile will pull from python:3.7-slim-buster precompiled with python 3.7 and add the latest npm and nodejs, git and wget packages.  
+This repository provides the necessary requirments to run the latest UDI Polyglot-v2 build in Docker running on a Synology NAS. I specifically run a DS1815+. It uses the node:10-alpine container from the original polyglot-v2 dockerfile at https://github.com/UniversalDevicesInc/polyglot-v2/tree/master/docker 
 
 To clone this repository, you will need git installed. Log onto your Synology NAS and install the Git Server Package from the Package Store.
 
