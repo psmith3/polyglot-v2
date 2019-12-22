@@ -1,18 +1,24 @@
-# Polyglot V2 for Docker on Synology
-
-
-FROM python:3.7-slim-buster
+FROM node:10-alpine
 
 EXPOSE 3000
+WORKDIR /opt/polyglot-v2/
 
-RUN apt-get update -y
-RUN apt-get install -y npm
-RUN apt-get -qqy install git wget
+RUN	apk add --no-cache linux-headers build-base && \
+		apk add --no-cache python3 python3-dev py3-pip bash git ca-certificates wget tzdata openssl && \
+    python3 -m ensurepip && \
+    rm -r /usr/lib/python*/ensurepip && \
+    pip3 install --upgrade pip setuptools && \
+    if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi && \
+    rm -r /root/.cache && \
+    cd /opt && \
+    git clone --depth=1 --single-branch --branch master https://github.com/UniversalDevicesInc/polyglot-v2.git && \
+    cd /opt/polyglot-v2 && \
+		npm install mongoose@5.8.2 && \
+		npm audit fix && \
+		npm install
 
-RUN mkdir -p /opt/udi-polyglotv2/
-WORKDIR /opt/udi-polyglotv2/
-RUN wget -q https://s3.amazonaws.com/polyglotv2/binaries/polyglot-v2-linux-x64.tar.gz
-RUN tar -zxf /opt/udi-polyglotv2/polyglot-v2-linux-x64.tar.gz
+VOLUME /root/.polyglot
+VOLUME /usr/lib/python3.8/site-packages
 
 # Run Polyglot
-CMD /opt/udi-polyglotv2/polyglot-v2-linux-x64
+CMD npm start
