@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing polyglot-v2 and mongo..." &
+echo "Installing latest polyglot-v2 with mongo..." &
 echo "Running docker-compose up..." &
 process_id=$!
 sudo docker-compose up -d
@@ -12,4 +12,4 @@ echo "Starting containers..." &
 wait $process_id
 sudo docker-compose up -d
 wait $process_id
-echo "Polyglot v2 should now be running in Docker! Access via webbrowser at https://{docker ip address}:3000"
+echo "Done. Polyglot v2 should now be running in Docker. Access via webbrowser at https://{docker ip address}:3000"
