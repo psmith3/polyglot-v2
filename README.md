@@ -12,23 +12,23 @@ This installation will create docker containers for polyglot-v2 and mongo. Local
 
 1) ssh into your NAS.
 
-2) Enter the following commands at the $ prompt. 
+2) Enter the following command: 
 
 		cd volume1/docker/
 
-3) Enter the following commands at the $ prompt. 
+3) Enter the following command:
 		
 		sudo git clone https://github.com/psmith3/polyglot-v2.git
 
 4) Enter your admin Password: 
 
-5) Enter the following commands at the $ prompt. 
+5) Enter the following commands: 
 
 		cd polyglot-v2/
 		
 		./install.sh 
 
-Done. Polyglot v2 should now be running in Docker. Access via webbrowser at https://{docker ip address}:3000
+Will take a few minutes to install. When complete, Polyglot v2 should now be running in Docker. Access via web browser at https://{docker ip address}:3000
 
 		
 Your browser may not allow you to view the webpage because the ssl certs are not signed. You can allow this with Safari on Mac or you can open a private browser window and access. You can overide the use https setting in the ./dot-polyglot/.env file to overcome this, but you will have to manually edit each node server in the ISY and uncheck SSL. If required, edit the .env.example file in the ./dot-polyglot directory and save the file as .env.
