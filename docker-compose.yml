@@ -19,6 +19,7 @@ services:
          - "3000:3000"
         volumes:
          - ./dot-polyglot:/root/.polyglot
+         - polyglot-pkgs:/usr/lib/python3.8/site-packages
         depends_on:
          - mongo
         environment:
@@ -26,3 +27,6 @@ services:
          - PYTHON3=/usr/bin/python3
          - NODE_ENV=development
         restart: always
+        
+volumes:
+  polyglot-pkgs:
