@@ -11,11 +11,7 @@ RUN	apk add --no-cache linux-headers build-base && \
     if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi && \
     rm -r /root/.cache && \
     cd /opt && \
-    git clone --depth=1 --single-branch --branch master https://github.com/UniversalDevicesInc/polyglot-v2.git && \
-    cd /opt/polyglot-v2 && \
-		npm install mongoose@5.8.2 && \
-		npm audit fix && \
-		npm install
+    git clone --depth=1 --single-branch --branch master https://github.com/UniversalDevicesInc/polyglot-v2.git
 
 VOLUME /root/.polyglot
 VOLUME /usr/lib/python3.8/site-packages
