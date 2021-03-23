@@ -19,7 +19,6 @@ RUN	apk add --no-cache linux-headers build-base && \
     rm -r /root/.cache && \
     cd /opt && \
     git clone --depth=1 --single-branch --branch master https://github.com/UniversalDevicesInc/polyglot-v2.git && \
-    npm audit fix && \
     npm install
 
 VOLUME /root/.polyglot
