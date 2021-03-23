@@ -1,6 +1,8 @@
 FROM node:10-alpine
 
 EXPOSE 3000
+EXPOSE 3001
+
 WORKDIR /opt/polyglot-v2/
 
 RUN	apk add --no-cache linux-headers build-base && \
