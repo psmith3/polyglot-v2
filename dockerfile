@@ -5,6 +5,9 @@ EXPOSE 3001
 
 WORKDIR /opt/polyglot-v2/
 
+COPY package.json /opt
+COPY package-lock.json /opt
+
 RUN	apk add --no-cache linux-headers build-base && \
 		apk add --no-cache python3 python3-dev py3-pip bash git ca-certificates wget tzdata openssl && \
     python3 -m ensurepip && \
